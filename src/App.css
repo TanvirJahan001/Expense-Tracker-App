@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body {
+  background-color: #f4f7fc; /* Light background color */
+  font-family: "Inter", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Input Field Styles */
+input[type="number"],
+input[type="text"],
+input[type="date"],
+select {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  width: 100%;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input Fields Focus Effect */
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #4ade80; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(72, 209, 116, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Set and Reset Budget Button */
+button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Set Budget Button */
+button.bg-green-500 {
+  background-color: #4ade80;
+  color: white;
+}
+
+button.bg-green-500:hover {
+  background-color: #3b9e68;
+  transform: translateY(-2px);
+}
+
+/* Reset Budget Button */
+button.bg-red-500 {
+  background-color: #f87171;
+  color: white;
+}
+
+button.bg-red-500:hover {
+  background-color: #f43f5e;
+  transform: translateY(-2px);
+}
+
+/* Expense List Item hover effect */
+li:hover {
+  background-color: #f3f4f6;
+  transition: background-color 0.3s ease;
+}
+
+/* Pie Chart container */
+.pie-chart-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
